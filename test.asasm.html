@@ -1,0 +1,34 @@
+<span class="asasm-mode-comment-face">; main.asasm</span>
+
+<span class="asasm-mode-directive-face">#version</span> 4
+<span class="asasm-mode-keyword-face">program
+ minorversion</span> 16
+ <span class="asasm-mode-keyword-face">majorversion</span> 46
+
+ <span class="asasm-mode-directive-face">#include</span> <span class="string">&quot;Test.script.asasm&quot;</span>
+
+<span class="asasm-mode-keyword-face">end</span> <span class="asasm-mode-comment-face">; program
+
+; Test.script.asasm</span>
+
+<span class="asasm-mode-keyword-face">script
+ sinit
+  refid</span> <span class="string">&quot;Test/init&quot;</span>
+  <span class="asasm-mode-keyword-face">body
+   maxstack</span> 1
+   <span class="asasm-mode-keyword-face">localcount</span> 1
+   <span class="asasm-mode-keyword-face">initscopedepth</span> 1
+   <span class="asasm-mode-keyword-face">maxscopedepth</span> 2
+   <span class="asasm-mode-keyword-face">code</span>
+    <span class="asasm-mode-mnemonic-face">getlocal0
+    pushscope
+
+    pushbyte</span>            5
+    <span class="asasm-mode-mnemonic-face">throw</span>
+
+    <span class="asasm-mode-comment-face">; 0x47</span>
+   <span class="asasm-mode-keyword-face">end</span> <span class="asasm-mode-comment-face">; code</span>
+  <span class="asasm-mode-keyword-face">end</span> <span class="asasm-mode-comment-face">; body</span>
+ <span class="asasm-mode-keyword-face">end</span> <span class="asasm-mode-comment-face">; method</span>
+ <span class="asasm-mode-keyword-face">trait slot</span> <span class="asasm-mode-type-face">QName</span>(<span class="asasm-mode-type-face">PackageNamespace</span>(<span class="string">&quot;&quot;</span>), <span class="string">&quot;Test&quot;</span>) <span class="asasm-mode-keyword-face">slotid</span> 1 <span class="asasm-mode-keyword-face">end
+end</span> <span class="asasm-mode-comment-face">; script</span>

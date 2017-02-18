@@ -1,0 +1,34 @@
+; main.asasm
+
+#version 4
+program
+ minorversion 16
+ majorversion 46
+
+ #include "Test.script.asasm"
+
+end ; program
+
+; Test.script.asasm
+
+script
+ sinit
+  refid "Test/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    pushbyte            5
+    throw
+
+    ; 0x47
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "Test") slotid 1 end
+end ; script
