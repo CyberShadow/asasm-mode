@@ -26,6 +26,8 @@ script
     pushbyte            5
     throw
 
+    istypelate
+
     ; 0x47
    end ; code
   end ; body
