@@ -65,8 +65,8 @@
   :group 'asasm-mode)
 
 (defconst asasm-mode-directive-keywords
-  '("#call" "#get" "#include" "#mixin" "#privatens" "#set" "#unset"
-    "#version"))
+  '("call" "get" "include" "mixin" "privatens" "set" "unset"
+    "version"))
 
 (defconst asasm-mode-keyword-keywords
   '("body" "cinit" "class" "code" "const" "dispid" "end" "extends"
@@ -130,10 +130,10 @@
 	(";.*$" . 'asasm-mode-comment-face)
 
 	;; Keywords
-	(,(regexp-opt asasm-mode-directive-keywords) . 'asasm-mode-directive-face)
-	(,(regexp-opt asasm-mode-keyword-keywords) . 'asasm-mode-keyword-face)
-	(,(regexp-opt asasm-mode-type-keywords) . 'asasm-mode-type-face)
-	(,(regexp-opt asasm-mode-mnemonic-keywords) . 'asasm-mode-mnemonic-face)))
+	(,(concat "#" (regexp-opt asasm-mode-directive-keywords 'symbols)) . 'asasm-mode-directive-face)
+	(,(regexp-opt asasm-mode-keyword-keywords 'symbols) . 'asasm-mode-keyword-face)
+	(,(regexp-opt asasm-mode-type-keywords 'symbols) . 'asasm-mode-type-face)
+	(,(regexp-opt asasm-mode-mnemonic-keywords 'symbols) . 'asasm-mode-mnemonic-face)))
 
 ;;;###autoload
 (define-derived-mode asasm-mode prog-mode "asasm"
