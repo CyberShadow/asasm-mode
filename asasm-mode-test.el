@@ -19,7 +19,9 @@
   (save-current-buffer
     (find-file name)
     (let ((hfy-optimisations (list 'body-text-only 'merge-adjacent-tags)))
-      (with-current-buffer (htmlfontify-buffer) (buffer-string)))))
+      (with-current-buffer (htmlfontify-buffer)
+	(write-file (concat name ".exp.html"))
+	(buffer-string)))))
 
 (ert-deftest asasm-mode-test-fontification ()
   (should
